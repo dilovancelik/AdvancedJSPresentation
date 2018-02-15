@@ -12,14 +12,24 @@
         <h1>Web3.js Presentation</h1>
         <p>This is a test website for the Advanced Javascript Meetup</p>
     </div>
-    <div id="votingArea">
-        <h3>Vote for your candidate</h3>
-        <div id="votingButtons">
-
+    <div id="noWeb3">
+        <img src="./noWeb3.jpg" alt="">
+    </div>
+    <div id="hasWeb3">
+        <div id="votingArea">
+            <h3>Vote for your candidate</h3>
+            <div id="votingButtons">
+                <button onclick="vote('George Washington')">George Washington</button>
+                <button onclick="vote('Genghis Khan')">Genghis Khan</button>
+                <button onclick="vote('Julius Caesar')">Julius Caesar</button>
+                <button onclick="vote('Mahatma Gandhi')">Mahatma Gandhi</button>
+            </div>
+        </div>
+        <div>
+            <button>Close the Vote</button>
         </div>
     </div>
-    <div>
-        <button>Close the Vote</button>
-    </div>
+    <script src="./web3Const.js" charset="utf-8"></script>
+    <script src="./index.js" charset="utf-8"></script>
 </body>
 </html>

@@ -5,3 +5,11 @@ body {
 div {
     padding-bottom: 50px;
 }
+
+#noWeb3 {
+    display: none;
+}
+
+#hasWeb3 {
+    display: none;
+}
