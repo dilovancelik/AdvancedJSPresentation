@@ -13,3 +13,8 @@ div {
 #hasWeb3 {
     display: none;
 }
+
+#myChart {
+    max-height: 50%;
+    max-width: 50%;
+}
