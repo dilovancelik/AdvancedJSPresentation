@@ -87,4 +87,9 @@ window.ABI = [
 	}
 ]
 
-window.candidates = ["George Washington", "Genghis Khan", "Julius Caesar", "Mahatma Gandhi"]
+window.candidates = {
+	"George Washington": 0 ,
+	"Genghis Khan": 0 ,
+	"Julius Caesar": 0 ,
+	"Mahatma Gandhi": 0 
+}
