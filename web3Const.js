@@ -1,39 +1,6 @@
-window.contractAddress = "0xdccffdce7bd7b07c14fc852d6ace5391f661b6e2";
+window.contractAddress = "0xb48bd6acdf2d5a52269760539e36e333db42c39a";
 
 window.ABI = [
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "getCandidates",
-		"outputs": [
-			{
-				"name": "candidateList",
-				"type": "bytes32[]"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "_candidate",
-				"type": "bytes32"
-			}
-		],
-		"name": "getCandidateVoteCount",
-		"outputs": [
-			{
-				"name": "voteCount",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
 	{
 		"constant": false,
 		"inputs": [],
@@ -41,6 +8,24 @@ window.ABI = [
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getCandidatesAndVotes",
+		"outputs": [
+			{
+				"name": "candidateList",
+				"type": "bytes32[4]"
+			},
+			{
+				"name": "votes",
+				"type": "uint256[4]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -61,7 +46,7 @@ window.ABI = [
 		"inputs": [
 			{
 				"name": "_candidates",
-				"type": "bytes32[]"
+				"type": "bytes32[4]"
 			}
 		],
 		"payable": false,
@@ -86,10 +71,3 @@ window.ABI = [
 		"type": "event"
 	}
 ]
-
-window.candidates = {
-	"George Washington": 0 ,
-	"Genghis Khan": 0 ,
-	"Julius Caesar": 0 ,
-	"Mahatma Gandhi": 0 
-}
