@@ -30,9 +30,7 @@ const vote = function(candidate) {
             console.log(`Something went wrong, this is the error:\n`);
             throw err;
         }
-
         waitingForVote.innerHTML = "Waiting for your vote to get registered, grab yourself a cop of coffee.";
-
         getTransactionReceipt(res);
     })
 }
@@ -44,11 +42,11 @@ const getTransactionReceipt = function(transaction) {
             setTimeout(getTransactionReceipt(transaction), 3000);
         } else if (err) {
             throw err;
-        } else if (receipt) {
+        } else if (receipt.status === "0x1") {
             waitingForVote.innerHTML = "Your vote was successfully registered";
-            updateChart();
+        } else if (receipt.status !== "0x1") {
+            waitingForVote.innerHTML = "Something went wrong with your vote.";
         }
-
     })
 }
 

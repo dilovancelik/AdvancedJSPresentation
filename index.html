@@ -22,17 +22,22 @@
                 <button onclick="vote('George Washington')">George Washington</button>
                 <button onclick="vote('Genghis Khan')">Genghis Khan</button>
                 <button onclick="vote('Julius Caesar')">Julius Caesar</button>
-                <button onclick="vote('Mahatma Gandhi')">Mahatma Gandhi</button>
+                <button onclick="vote('Mansa Musa')">Mahatma Gandhi</button>
             </div>
             <p id="waitingForVote"></p>
-        </div>
+        </div
+        <br>
+        <br>
+        <h3>Results</h3>
+        <button onclick="updateChart()">Retrieve Votes</button>
         <canvas id="myChart" width="100px" height="70px"></canvas>
+
+        <br>
+        <br>
         <div>
             <button>Close the Vote</button>
         </div>
     </div>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js" charset="utf-8"></script>
 
     <script src="./web3Const.js" charset="utf-8"></script>
