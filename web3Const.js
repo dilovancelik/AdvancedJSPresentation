@@ -1,4 +1,4 @@
-window.contractAddress = "0xb48bd6acdf2d5a52269760539e36e333db42c39a";
+window.contractAddress = "0x12ee67d0ddb197694da7c4620ef1f5c524f80d00";
 
 window.ABI = [
 	{

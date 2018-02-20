@@ -5,8 +5,6 @@ window.addEventListener('load', function() {
     } else {
         noWeb3();
     }
-
-
 })
 
 const noWeb3 = function() {
@@ -62,6 +60,30 @@ const getVoteCount = function() {
         })
     })
 }
+
+const closeVote = function() {
+    votingContract.closeVote((err, res) => {
+        if(err) {
+            throw err;
+        };
+        getTransactionReceiptCloseVote(res);
+    });
+}
+
+const getTransactionReceiptCloseVote = function(transaction) {
+    web3.eth.getTransactionReceipt(transaction, (err, receipt) => {
+        if(!err & !receipt) {
+            setTimeout(getTransactionReceiptCloseVote(transaction), 3000);
+        } else if (err) {
+            throw err;
+        } else if (receipt.status === "0x1") {
+            alert("You successfully closed the vote");
+        } else if (receipt.status !== "0x1") {
+            alert("You could not close the vote");
+        }
+    })
+}
+
 
 
 const updateChart = function() {
